@@ -3,6 +3,7 @@ This is my guide to writing iOS applications in Swift. Projects lead by myself s
 ## Table of Contents
 - General
 - Naming
+- Coding Style
 - Code Organization
 - Inspirations
 
@@ -12,7 +13,6 @@ This is my guide to writing iOS applications in Swift. Projects lead by myself s
 - No semicolons, unless they are required.
 - No parantheses, unless they are required.
 - Each variable or constant must be declared on a separate line.
-- `let` is preferred over `var`. `var` should only be used when mutability is strictly required.
 - Always use named parameters.
 - **2 spaces** should be used for indentation. No more, no less, no tabs.
 
@@ -184,8 +184,14 @@ class ConnectionTableViewCell: UITableViewCell {
 - As per Apple's API Design Guidelines, a protocol should be named as nouns if they describe what something is doing (e.g. Collection) and using the suffixes able, ible, or ing if it describes a capability (e.g. Equatable, ProgressReporting). If neither of those options makes sense for your use case, you can add a Protocol suffix to the protocol's name as well. Some example protocols are below.
 
 - When naming function arguments, make sure that the function can be read easily to understand the purpose of each argument.
--
 
+## Coding Style
+
+- `let` is preferred over `var`. `var` should only be used when mutability is strictly required.
+
+- Prefer the composition of map, filter, reduce, etc. over iterating when transforming from one collection to another. Make sure to avoid using closures that have side effects when using these methods.
+
+## Code Organization
 
 ## Inspirations
 
